@@ -85,9 +85,9 @@ if __name__ == '__main__':
     if not os.listdir('data/final'):
         # save data from first iteration
         df.to_csv('data/final/data_warehouse.csv', index=False)
-        df.to_csv(f'data/raw/{time_scraped.strftime("%Y-%m-%d %H-%M-%S")}.csv', index=False)
+        df.to_csv(f'data/processed/{time_scraped.strftime("%Y-%m-%d %H-%M-%S")}.csv', index=False)
     else:
-        df.to_csv(f'data/raw/{time_scraped.strftime("%Y-%m-%d %H-%M-%S")}.csv', index=False)
+        df.to_csv(f'data/processed/{time_scraped.strftime("%Y-%m-%d %H-%M-%S")}.csv', index=False)
         df_warehouse = pd.read_csv('data/final/data_warehouse.csv')
         df_warehouse = update_warehouse(df_warehouse, df)
         df_warehouse.to_csv('data/final/data_warehouse.csv', index=False)
