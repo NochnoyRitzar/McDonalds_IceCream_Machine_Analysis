@@ -2,6 +2,10 @@
 ## Summary
 Analyze data when McDonald's ice cream machines are broken to determine how much revenue they lose. <br>
 Analysis is very inaccurate due to wild guesses on a lot of factors and variables. Even hourly distribution of customers, no necessary 4-hour maintenance period, all-day restaurant schedule, ice cream selling all-day - those are assumed.
+### How to improve:
+* Use Apache Airflow for constructing pipelines for ETL
+* Use a specialized data warehouse to store and query data more efficiently (Ex: BigQuery or Redshift)
+
 ## How to run:
 ### To analyze
 ```
